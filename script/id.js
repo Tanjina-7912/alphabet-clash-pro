@@ -31,6 +31,12 @@ function setTextElementValueById(elementId,value){
     element.innerText=value;
 }
 
+function getElementTextById(elementId){
+    const element =document.getElementById(elementId);
+    const text =element.innerText;
+    return text;
+}
+
 
 
 
@@ -50,6 +56,11 @@ function getARandomAlphabet(){
 function handleKeyboardKeyUp(event){
     const playerPressed=event.key;
     console.log('player pressed',playerPressed);
+// stop the game
+if(playerPressed === 'Escape'){
+    gameOver()
+}
+
 
 
 const currentAlpahbetElement=document.getElementById('current-alphabet');
@@ -143,12 +154,24 @@ setBackgroundById(alphabet);
 
 function play(){
     hideElementbyId('home-screen');
+    hideElementbyId('final-score');
     showId('play-ground');
+    // ?resate
+setTextElementValueById('current-life',5)
+setTextElementValueById('current-score',0)
     continueGame()
 }
 function gameOver(){
     hideElementbyId('play-ground');
     showId('final-score');
+
+    // update score
+const lastScore =getTextElementValueById('current-score')
+setTextElementValueById('last-score', lastScore)
+// clear last selected highlight
+
+const  currentAlphabet=getElementTextById('current-alphabet');
+removeBackgroundById(currentAlphabet);
 }
 
 
