@@ -14,73 +14,89 @@
 
 <body class="font-poppins">
     <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
-        <section class="home min-h-screen text-white anton-regular flex justify-center items-center hidden ">
+        <section id="home-screen" class=" min-h-screen text-white anton-regular flex justify-center items-center  ">
             <div class="flex flex-col items-center gap-10">
                 <h1 class="text-8xl">ALPHA CLASH PRO</h1>
                 <p>Unleash your Keyboard kun g fu : press "Enter" to Play</p>
-                <button class="btn bg-white text-black">Play Now</button>
+                <button class="btn bg-white text-black" onclick="play()">Play Now</button>
             </div>
         </section>
         <!-- play ground -->
-        <section class="play-ground hidden">
+        <section class="hidden" id="play-ground">
             <div>
                 <!-- screen -->
- <div class="mockup-window  border-[20px]  w-400 rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]">
-  <div class="grid border-base-300 h-80 "></div>
-</div>
+                <div class="mockup-window  border-[20px] lg:w-400 rounded-2xl border-[#010313CC] bg-[#FFFFFFB3] mx-auto">
+                    <div class="grid border-base-300 h-80 "> 
+                        <div class="flex justify-center items-center h-full">
+<p id="current-alphabet" class="text-black text-9xl font-bold uppercase">Y</p>
+                        </div>
+                    </div>
+                </div>
                 <!-- keyboard  start-->
                 <div>
                     <div class="my-1 flex w-full justify-center gap-1">
-                        <kbd class="kbd">q</kbd>
-                        <kbd class="kbd">w</kbd>
-                        <kbd class="kbd">e</kbd>
-                        <kbd class="kbd">r</kbd>
-                        <kbd class="kbd">t</kbd>
-                        <kbd class="kbd">y</kbd>
-                        <kbd class="kbd">u</kbd>
-                        <kbd class="kbd">i</kbd>
-                        <kbd class="kbd">o</kbd>
-                        <kbd class="kbd">p</kbd>
+                        <kbd id="q" class="kbd">q</kbd>
+                        <kbd id="w" class="kbd">w</kbd>
+                        <kbd id="e" class="kbd">e</kbd>
+                        <kbd id="r" class="kbd">r</kbd>
+                        <kbd id="t" class="kbd">t</kbd>
+                        <kbd id="y" class="kbd">y</kbd>
+                        <kbd id="u" class="kbd">u</kbd>
+                        <kbd id="i" class="kbd">i</kbd>
+                        <kbd id="o" class="kbd">o</kbd>
+                        <kbd id="p" class="kbd">p</kbd>
                     </div>
                     <div class="my-1 flex w-full justify-center gap-1">
-                        <kbd class="kbd">a</kbd>
-                        <kbd class="kbd">s</kbd>
-                        <kbd class="kbd">d</kbd>
-                        <kbd class="kbd">f</kbd>
-                        <kbd class="kbd">g</kbd>
-                        <kbd class="kbd">h</kbd>
-                        <kbd class="kbd">j</kbd>
-                        <kbd class="kbd">k</kbd>
-                        <kbd class="kbd">l</kbd>
+                        <kbd id="a" class="kbd">a</kbd>
+                        <kbd id="s" class="kbd">s</kbd>
+                        <kbd id="d" class="kbd">d</kbd>
+                        <kbd id="f" class="kbd">f</kbd>
+                        <kbd id="g" class="kbd">g</kbd>
+                        <kbd id="h" class="kbd">h</kbd>
+                        <kbd id="j" class="kbd">j</kbd>
+                        <kbd id="k" class="kbd">k</kbd>
+                        <kbd id="l" class="kbd">l</kbd>
                     </div>
                     <div class="my-1 flex w-full justify-center gap-1">
-                        <kbd class="kbd">z</kbd>
-                        <kbd class="kbd">x</kbd>
-                        <kbd class="kbd">c</kbd>
-                        <kbd class="kbd">v</kbd>
-                        <kbd class="kbd">b</kbd>
-                        <kbd class="kbd">n</kbd>
-                        <kbd class="kbd">m</kbd>
-                        <kbd class="kbd">/</kbd>
+                        <kbd id="z" class="kbd">z</kbd>
+                        <kbd id="x" class="kbd">x</kbd>
+                        <kbd id="c" class="kbd">c</kbd>
+                        <kbd id="v" class="kbd">v</kbd>
+                        <kbd id="b" class="kbd">b</kbd>
+                        <kbd id="n" class="kbd">n</kbd>
+                        <kbd id="m" class="kbd">m</kbd>
+                        <kbd id="/" class="kbd">/</kbd>
                     </div>
                 </div>
                 <!-- keyboard  end-->
-
+                <div class="  flex justify-evenly ">
+                    <button class="btn rounded-full bg-purple-500 text-white px-4">
+                        Life
+                    <span id="current-life">5</span> </button>
+                    <button class="btn rounded-full bg-purple-800 text-white px-4">
+                      Score 
+                      <span id="current-score">1</span>
+                    </button>
+                   
+                  
                 <!-- life score-->
             </div>
         </section>
         <!-- play ground end -->
-        <section class="score  flex justify-center items-center min-h-screen hidden">
-<div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
-    <h1 class="text-8xl"> 
-<span class="font-extrabold">Score :</span>
-<span>14</span>
-    </h1>
-    <button class="btn">Play Again</button>
-    <p>practice will make you a pro</p>
-</div>
+        <section id="final-score" class="  flex justify-center items-center min-h-screen hidden">
+            <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
+                <h1 class="text-3xl">Game Over !</h1>
+                <h1 class="text-8xl">
+                    <span class="font-extrabold">Score :</span>
+                    <span>14</span>
+                </h1>
+                <button class="btn">Play Again</button>
+                <p>practice will make you a pro</p>
+            </div>
         </section>
     </main>
+    <script src="script/script.js"></script>
+    <script src="script/id.js"></script>
 </body>
 
 </html>
